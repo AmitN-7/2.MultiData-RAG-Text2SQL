@@ -6,7 +6,7 @@ Now supports context-aware chunking with Docling for improved RAG quality.
 """
 
 from typing import List, Dict, Any
-import tiktoken
+import tiktoken #token calculation
 import logging
 from unstructured.partition.auto import partition
 from pathlib import Path

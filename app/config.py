@@ -72,7 +72,7 @@ class Settings(BaseSettings):
         return "data/cached_chunks"
 
     # S3 Storage Configuration (for Lambda deployment)
-    S3_CACHE_BUCKET: str = "rag-cache-docsqa"
+    S3_CACHE_BUCKET: str = "rag-cache-new"
     AWS_REGION: str = "us-east-1"
     # AWS credentials from environment or IAM role (recommended for Lambda)
     # AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are read automatically by boto3
@@ -86,7 +86,6 @@ class Settings(BaseSettings):
     CACHE_TTL_RAG: int = 3600           # 1 hour - may change with new documents
     CACHE_TTL_SQL_GEN: int = 86400      # 24 hours - schema relatively stable
     CACHE_TTL_SQL_RESULT: int = 900     # 15 minutes - data changes frequently
-
 
     @property
     def is_lambda(self) -> bool:
